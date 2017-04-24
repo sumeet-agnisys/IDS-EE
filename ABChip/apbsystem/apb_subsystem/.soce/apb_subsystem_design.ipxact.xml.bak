@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ids="http://www.agnisys.com/">
+   <spirit:vendor>spiritconsortium.org</spirit:vendor>
+   <spirit:library>Leon2RTL</spirit:library>
+   <spirit:name>Unknow</spirit:name>
+   <spirit:version>1.0</spirit:version>
+   <spirit:model>
+      <spirit:views/>
+      <spirit:ports/>
+   </spirit:model>
+   <spirit:description/>
+   <spirit:vendorExtensions/>
+</spirit:component>

@@ -1,0 +1,13 @@
+Version : 0.8
+Product : SoCEEnterprise
+Date    : Thu Jul 14 18:26:03 IST 2016
+============================================================
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========
+---call generateOutPut : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbSubsystem\soce\apbSubsystem_component.xml
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========

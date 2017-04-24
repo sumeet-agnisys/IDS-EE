@@ -1,0 +1,14 @@
+Version : 0.8
+Product : SoCEEnterprise
+Date    : Thu Jun 09 15:25:47 IST 2016
+============================================================
+---call generateOutPut : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apb_subsystem\apb_subsystem.xlsx
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========
+---call generateOutPut : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apb_subsystem\apb_subsystem_design.xlsx
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========
