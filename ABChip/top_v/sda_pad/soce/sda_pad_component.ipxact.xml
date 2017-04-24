@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:ids="https://www.agnisys.com/products/idesignspec-uvm-register-generator" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <spirit:vendor>AGNISYS</spirit:vendor>
+   <spirit:library>AGNISYS</spirit:library>
+   <spirit:name>sda_pad</spirit:name>
+   <spirit:model>
+      <spirit:views>
+         <spirit:view>
+            <spirit:name>spirit-design</spirit:name>
+            <spirit:envIdentifier>::Hierarchy</spirit:envIdentifier>
+         </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+         <spirit:port>
+            <spirit:name>SDA_OUT</spirit:name>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>SCL_DLY</spirit:name>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+            </spirit:wire>
+         </spirit:port>
+      </spirit:ports>
+   </spirit:model>
+   <spirit:vendorExtensions>
+      <ids:type>false</ids:type>
+      <data>model</data>
+   </spirit:vendorExtensions>
+</spirit:component>

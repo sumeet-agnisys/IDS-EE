@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   <spirit:vendor>Agnisys</spirit:vendor>
+   <spirit:library>mixed_signal</spirit:library>
+   <spirit:name>ISL91305_Master_Bandgap_IP</spirit:name>
+   <spirit:version>1.0</spirit:version>
+   <spirit:vendorExtensions>
+      <group name="VBG Voltage">
+         <functions>
+            <function name="VBG.v" symbol="Vref">
+               <corners>
+                  <corner req.typical="1.223" unit="Volt">Typical_Corner</corner>
+               </corners>
+               <doc>VBG Nominal Voltage</doc>
+            </function>
+            <function name="Accuracy(VBG.v, Vref.typical)" symbol="Vrefa">
+               <corners>
+                  <corner req.min="-0.2" req.max="0.2" unit="%">Boldface_Corner</corner>
+                  <corner test.min="VBAT.v=2.8" test.max="VBAT.v=5.5" req.min="-0.5" req.max="0.5"
+                     unit="%">Boldface_Corner</corner>
+                  <corner test.typical="Low Power Mode" req.min="-1.0" req.max="1.0" unit="%"
+                     >Boldface_Corner</corner>
+               </corners>
+               <doc>VBG Accurcy Post Trim</doc>
+            </function>
+            <function name="Value_Range(VBG.v, Vref.typical)" symbol="Vref_retrim">
+               <corners>
+                  <corner test.typical="I_BG_Trim = 0x00 
+without chopper(??)" req.min="90.0"
+                     req.max="110.0" unit="%">Boldface_Corner</corner>
+                  <corner test.typical="I_BG_Trim = 0x00
+with chopper (??)" req.min="98.0"
+                     req.max="102.0" unit="%">Boldface_Corner</corner>
+               </corners>
+               <doc>Trim code = 00</doc>
+            </function>
+            <function name="Accuracy(VBG.v, Vref.typical)" symbol="Vref_trimrange">
+               <corners>
+                  <corner test.min="I_BG_Trim = 0x00" test.max="I_BG_Trim = 0xFF" req.min="-5.2"
+                     req.max="5.2" unit="%">Boldface_Corner</corner>
+               </corners>
+               <doc>Trim code 8 bits, 1LSB = 0.5mV</doc>
+            </function>
+         </functions>
+      </group>
+      <group name="SUPPLY CURRENT">
+         <functions>
+            <function name="VBG.i" symbol="Inom">
+               <corners>
+                  <corner req.max="8.0" req.typical="5.0" unit="uA">Boldface_Corner</corner>
+               </corners>
+               <doc>VBG Supply Current</doc>
+            </function>
+            <function name="Temp_Coef(VBG.v, Vref.typical, Tj)" symbol="VBG_iq_tc">
+               <corners>
+                  <corner req.typical="0.15" unit="%/ °C">Boldface_Corner</corner>
+               </corners>
+               <doc>VBG supply current temp coefficient (PTAT)</doc>
+            </function>
+         </functions>
+      </group>
+      <group name="PSRR (with Coll_sel = 0 and 50 ohm res at VBAT)">
+         <functions>
+            <function name="PSRR(VBG.v, VBAT.v)" symbol="PSRR">
+               <corners>
+                  <corner test.min="VBAT.f = 50Hz" test.max="VBAT.f = 1kHz"
+                     test.typical="Coll_sel = 0" req.min="45.0" req.typical="70.0" unit="dB"
+                     >Typical_Corner</corner>
+                  <corner test.min="VBAT.f = 1kHz" test.max="VBAT.f = 10kHz"
+                     test.typical="Coll_sel = 0" req.min="30.0" unit="dB">Typical_Corner</corner>
+                  <corner test.min="VBAT.f = 10kHz" test.max="VBAT.f = 100kHz"
+                     test.typical="Coll_sel = 0" req.min="45.0" unit="dB">Typical_Corner</corner>
+                  <corner test.min="VBAT.f = 100kHz" test.max="VBAT.f = 1MHz"
+                     test.typical="Coll_sel = 0" req.min="50.0" unit="dB">Typical_Corner</corner>
+               </corners>
+               <doc>VBG PSRR 50 Hz to 1kHz</doc>
+               <doc>VBG PSRR 1kHz to 10kHz</doc>
+               <doc>VBG PSRR 10kHz to 100kHz</doc>
+               <doc>VBG PSRR 100kHz to 1MHz</doc>
+            </function>
+         </functions>
+      </group>
+      <group name="PSRR (with Coll_sel = 1 and 50 ohm res at VBAT)">
+         <functions>
+            <function name="PSRR(VBG.v, VBAT.v)" symbol="PSRR">
+               <corners>
+                  <corner test.min="VBAT.f = 50Hz" test.max="VBAT.f = 1kHz"
+                     test.typical="Coll_sel = 1" req.min="70.0" unit="dB">Typical_Corner</corner>
+                  <corner test.min="VBAT.f = 1kHz" test.max="VBAT.f = 10kHz"
+                     test.typical="Coll_sel = 1" req.min="45.0" unit="dB">Typical_Corner</corner>
+                  <corner test.min="VBAT.f = 10kHz" test.max="VBAT.f = 100kHz"
+                     test.typical="Coll_sel = 1" req.min="60.0" unit="dB">Typical_Corner</corner>
+                  <corner test.min="VBAT.f = 100kHz" test.max="VBAT.f = 1MHz"
+                     test.typical="Coll_sel = 1" req.min="60.0" unit="dB">Typical_Corner</corner>
+               </corners>
+               <doc>VBG PSRR 50 Hz to 1kHz</doc>
+               <doc>VBG PSRR 1kHz to 10kHz</doc>
+               <doc>VBG PSRR 10kHz to 100kHz</doc>
+               <doc>VBG PSRR 100kHz to 1MHz</doc>
+            </function>
+         </functions>
+      </group>
+      <group name="Voltage Under Noise">
+         <functions>
+            <function name="abs(VBG.v - Vref.typical)" symbol="Noise">
+               <corners>
+                  <corner req.typical="1.0" unit="mV">Typical_Corner</corner>
+               </corners>
+               <doc>VBG from 100 to 10 MHz p-p noise, chopper noise, + ac noise</doc>
+            </function>
+         </functions>
+      </group>
+      <group name="Start Up Time">
+         <functions>
+            <function name="TSTART(VBG.v)" symbol="Tstart">
+               <corners>
+                  <corner req.max="1.5" unit="mS">Typical_Corner</corner>
+               </corners>
+               <doc>Power up to VBG settle to 99%</doc>
+            </function>
+         </functions>
+      </group>
+      <group name="Load Regulation">
+         <functions>
+            <function name="Accuracy(VBG.v, Vref.typical)" symbol="Accurcy">
+               <corners>
+                  <corner test.min="VBG.i = ??" test.max="VBG.i = ???" req.typical="0.1" unit="%"
+                     >Typical_Corner</corner>
+               </corners>
+               <doc>VBG Accuracty over load change</doc>
+            </function>
+         </functions>
+      </group>
+   </spirit:vendorExtensions>
+   <spirit:description>The Master Bandgap is the internal reference used through the ISL91305 power
+      management IC.</spirit:description>
+</spirit:component>

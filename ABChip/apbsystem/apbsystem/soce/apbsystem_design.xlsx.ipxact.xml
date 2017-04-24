@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:design xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ids="http://www.agnisys.com/">
+   <spirit:vendor>spiritconsortium.org</spirit:vendor>
+   <spirit:library>Leon2RTL</spirit:library>
+   <spirit:name>design_apbSubSystem</spirit:name>
+   <spirit:version>1.0</spirit:version>
+   <spirit:componentInstances>
+      <spirit:componentInstance>
+         <spirit:instanceName>i_apbSubSystem</spirit:instanceName>
+         <spirit:description/>
+         <spirit:componentRef spirit:vendor="spiritconsortium.org" spirit:version="1.3" spirit:name="apbSubSystem" spirit:library="Leon2RTL"/>
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="addr_width">32.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="bus_width">32.0</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <ref ipxactpath="C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\apb_subsystem\.soce\apb_subsystem.xlsx.ipxact.xml">C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\apb_subsystem\apb_subsystem.xlsx</ref>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>ii_apbbus8</spirit:instanceName>
+         <spirit:description/>
+         <spirit:componentRef spirit:vendor="spiritconsortium.org" spirit:version="1.3" spirit:name="apbbus" spirit:library="Leon2RTL"/>
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="rangeSlv0">4096.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="rangeSlv1">4096.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="rangeSlv2">4096.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="rangeSlv3">4096.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="rangeSlv4">4096.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="rangeSlv5">4096.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="rangeSlv6">4096.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="rangeSlv7">4096.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="remapAddressSlv0">0x0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="remapAddressSlv1">0x1000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="remapAddressSlv2">0x2000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="remapAddressSlv3">0x3000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="remapAddressSlv4">0x4000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="remapAddressSlv5">0x5000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="remapAddressSlv6">0x6000</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="remapAddressSlv7">0x7000</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <ref ipxactpath="C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\apbbus\.soce\apbbus.xlsx.ipxact.xml">C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\apbbus\apbbus.xlsx</ref>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>ii_apbmst</spirit:instanceName>
+         <spirit:description/>
+         <spirit:componentRef spirit:vendor="spiritconsortium.org" spirit:version="1.2" spirit:name="apbmst" spirit:library="Leon2RTL"/>
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="masterRange">1M</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <ref ipxactpath="C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\apbmst\.soce\apbmst.xlsx.ipxact.xml">C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\apbmst\apbmst.xlsx</ref>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>ii_irqctrl</spirit:instanceName>
+         <spirit:description/>
+         <spirit:componentRef spirit:vendor="spiritconsortium.org" spirit:version="1.2" spirit:name="irqctrl" spirit:library="Leon2RTL"/>
+         <spirit:vendorExtensions>
+            <ref ipxactpath="C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\irqctrl\.soce\irqctrl.xlsx.ipxact.xml">C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\irqctrl\irqctrl.xlsx</ref>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>ii_timers</spirit:instanceName>
+         <spirit:description/>
+         <spirit:componentRef spirit:vendor="spiritconsortium.org" spirit:version="1.2" spirit:name="timers" spirit:library="Leon2RTL"/>
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="TPRESC">22.0</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <ref ipxactpath="C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\timers\.soce\timers.xlsx.ipxact.xml">C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\timers\timers.xlsx</ref>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>ii_uart</spirit:instanceName>
+         <spirit:description/>
+         <spirit:componentRef spirit:vendor="spiritconsortium.org" spirit:version="1.2" spirit:name="uart" spirit:library="Leon2RTL"/>
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="ClockPeriod">8.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="ClockPulseDuration">4.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="ClockPulseOffset">4.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="ClockPulseValue">1.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="EXTBAUD">FALSE</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="VirtualClockPeriod">8.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="VirtualClockPulseDuration">4.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="VirtualClockPulseOffset">4.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="VirtualClockPulseValue">1.0</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <ref ipxactpath="C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\uart\.soce\uart.xlsx.ipxact.xml">C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\uart\uart.xlsx</ref>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>ii_uart_1</spirit:instanceName>
+         <spirit:description/>
+         <spirit:componentRef spirit:vendor="spiritconsortium.org" spirit:version="1.2" spirit:name="uart" spirit:library="Leon2RTL"/>
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="ClockPeriod">8.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="ClockPulseDuration">4.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="ClockPulseOffset">4.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="ClockPulseValue">1.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="EXTBAUD">FALSE</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="id_OutputFileName">default.htm</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="VirtualClockPeriod">8.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="VirtualClockPulseDuration">4.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="VirtualClockPulseOffset">4.0</spirit:configurableElementValue>
+            <spirit:configurableElementValue spirit:referenceId="VirtualClockPulseValue">1.0</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <ref ipxactpath="C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\uart\.soce\uart.xlsx.ipxact.xml">C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\uart\uart.xlsx</ref>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+      <spirit:componentInstance>
+         <spirit:instanceName>ii_uartcrosser</spirit:instanceName>
+         <spirit:description/>
+         <spirit:componentRef spirit:vendor="spiritconsortium.org" spirit:version="1.2" spirit:name="uartcrosser" spirit:library="Leon2RTL"/>
+         <spirit:configurableElementValues>
+            <spirit:configurableElementValue spirit:referenceId="ScalerValue">0x1</spirit:configurableElementValue>
+         </spirit:configurableElementValues>
+         <spirit:vendorExtensions>
+            <ref ipxactpath="C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\uartcrosser\.soce\uartcrosser.xlsx.ipxact.xml">C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\apbsystem\..\uartcrosser\uartcrosser.xlsx</ref>
+         </spirit:vendorExtensions>
+      </spirit:componentInstance>
+   </spirit:componentInstances>
+   <spirit:interconnections>
+      <spirit:interconnection>
+         <spirit:name>default101</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_apbmst" spirit:busRef="ambaAPB"/>
+         <spirit:activeInterface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredMaster"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default102</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_irqctrl" spirit:busRef="ambaAPB"/>
+         <spirit:activeInterface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredSlave0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default107</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_timers" spirit:busRef="ambaAPB"/>
+         <spirit:activeInterface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredSlave1"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default108</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_uart" spirit:busRef="ambaAPB"/>
+         <spirit:activeInterface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredSlave2"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default109</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_uart_1" spirit:busRef="ambaAPB"/>
+         <spirit:activeInterface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredSlave3"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default110</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_irqctrl" spirit:busRef="SlaveInt1"/>
+         <spirit:activeInterface spirit:componentRef="ii_timers" spirit:busRef="Int0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default111</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_irqctrl" spirit:busRef="SlaveInt2"/>
+         <spirit:activeInterface spirit:componentRef="ii_timers" spirit:busRef="Int1"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default112</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_irqctrl" spirit:busRef="SlaveInt0"/>
+         <spirit:activeInterface spirit:componentRef="ii_uart" spirit:busRef="Interrupt"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default113</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_irqctrl" spirit:busRef="SlaveInt3"/>
+         <spirit:activeInterface spirit:componentRef="ii_uart_1" spirit:busRef="Interrupt"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default114</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_uart" spirit:busRef="serial"/>
+         <spirit:activeInterface spirit:componentRef="ii_uartcrosser" spirit:busRef="Uart0"/>
+      </spirit:interconnection>
+      <spirit:interconnection>
+         <spirit:name>default115</spirit:name>
+         <spirit:activeInterface spirit:componentRef="ii_uart_1" spirit:busRef="serial"/>
+         <spirit:activeInterface spirit:componentRef="ii_uartcrosser" spirit:busRef="Uart1"/>
+      </spirit:interconnection>
+   </spirit:interconnections>
+   <spirit:adHocConnections>
+      <spirit:adHocConnection>
+         <spirit:name>default101</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_uart_1" spirit:portRef="scaler" spirit:left="7" spirit:right="0"/>
+         <spirit:internalPortReference spirit:componentRef="ii_uart" spirit:portRef="scaler" spirit:left="7" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default102</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_uart_1" spirit:portRef="scaler" spirit:left="7" spirit:right="0"/>
+         <spirit:internalPortReference spirit:componentRef="ii_uartcrosser" spirit:portRef="scaler" spirit:left="7" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection spirit:tiedValue="0">
+         <spirit:name>default103</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="freezetime"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection spirit:tiedValue="1">
+         <spirit:name>default104</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_irqctrl" spirit:portRef="irq" spirit:left="14" spirit:right="4"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection spirit:tiedValue="1">
+         <spirit:name>default105</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="dsuact"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection spirit:tiedValue="1">
+         <spirit:name>default106</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="dsuen"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection spirit:tiedValue="1">
+         <spirit:name>default107</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="dsubre"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection spirit:tiedValue="1">
+         <spirit:name>default108</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="dsuen"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection spirit:tiedValue="1">
+         <spirit:name>default109</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="lresp"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection spirit:tiedValue="1">
+         <spirit:name>default110</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="ntrace"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default111</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_irqctrl" spirit:portRef="clk"/>
+         <spirit:externalPortReference spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default112</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_irqctrl" spirit:portRef="rst"/>
+         <spirit:externalPortReference spirit:portRef="rst_an"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default113</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="clk"/>
+         <spirit:externalPortReference spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default114</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="rst"/>
+         <spirit:externalPortReference spirit:portRef="rst_an"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default115</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="ii_timers" spirit:portRef="dresp" spirit:left="1" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hresp" spirit:left="1" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default116</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="Interrupt_IRL" spirit:left="3" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="Interrupt_IRL" spirit:left="3" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default117</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_haddr" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_haddr" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default118</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hburst" spirit:left="2" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hburst" spirit:left="2" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default119</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hprot" spirit:left="3" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hprot" spirit:left="3" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default120</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hready"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hready"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default121</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hsel"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hsel"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default122</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hsize" spirit:left="2" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hsize" spirit:left="2" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default123</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_htrans" spirit:left="1" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_htrans" spirit:left="1" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default124</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hwdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hwdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default125</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hwrite"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hwrite"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default126</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hrdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hrdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default127</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hready_resp"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hready_resp"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default128</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="ex_ambaAHB_hresp" spirit:left="1" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="ex_ambaAHB_hresp" spirit:left="1" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default129</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv4_prdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv4_prdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default130</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv4_paddr" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv4_paddr" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default131</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv4_penable"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv4_penable"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default132</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv4_psel"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv4_psel"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default133</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv4_pwdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv4_pwdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default134</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv4_pwrite"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv4_pwrite"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default135</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv5_prdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv5_prdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default136</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv5_paddr" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv5_paddr" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default137</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv5_penable"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv5_penable"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default138</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv5_psel"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv5_psel"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default139</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv5_pwdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv5_pwdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default140</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv5_pwrite"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv5_pwrite"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default141</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv6_prdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv6_prdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default142</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv6_paddr" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv6_paddr" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default143</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv6_penable"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv6_penable"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default144</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv6_psel"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv6_psel"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default145</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv6_pwdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv6_pwdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default146</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv6_pwrite"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv6_pwrite"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default147</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv7_prdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv7_prdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default148</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv7_paddr" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv7_paddr" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default149</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv7_penable"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv7_penable"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default150</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv7_psel"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv7_psel"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default151</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv7_pwdata" spirit:left="31" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv7_pwdata" spirit:left="31" spirit:right="0"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default152</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="i_apbbus_slv7_pwrite"/>
+         <spirit:externalPortReference spirit:portRef="i_apbbus_slv7_pwrite"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default153</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="clk"/>
+         <spirit:externalPortReference spirit:portRef="clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default154</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="rst_an"/>
+         <spirit:externalPortReference spirit:portRef="rst_an"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default155</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="Interrupt_INTack"/>
+         <spirit:externalPortReference spirit:portRef="Interrupt_INTack"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+         <spirit:name>default156</spirit:name>
+         <spirit:internalPortReference spirit:componentRef="i_apbSubSystem" spirit:portRef="Interrupt_IRQVEC" spirit:left="3" spirit:right="0"/>
+         <spirit:externalPortReference spirit:portRef="Interrupt_IRQVEC" spirit:left="3" spirit:right="0"/>
+      </spirit:adHocConnection>
+   </spirit:adHocConnections>
+   <spirit:hierConnections>
+      <spirit:hierConnection spirit:interfaceRef="i_apbbus_slv4">
+         <spirit:interface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredSlave4"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="ex_ambaAHB">
+         <spirit:interface spirit:componentRef="ii_apbmst" spirit:busRef="ambaAHB"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="i_apbbus_slv5">
+         <spirit:interface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredSlave5"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="i_apbbus_slv6">
+         <spirit:interface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredSlave6"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="i_apbbus_slv7">
+         <spirit:interface spirit:componentRef="ii_apbbus8" spirit:busRef="MirroredSlave7"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="Interrupt">
+         <spirit:interface spirit:componentRef="ii_irqctrl" spirit:busRef="MasterInt"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="Interrupt">
+         <spirit:interface spirit:componentRef="i_apbSubSystem" spirit:busRef="Interrupt"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="ex_ambaAHB">
+         <spirit:interface spirit:componentRef="i_apbSubSystem" spirit:busRef="ex_ambaAHB"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="i_apbbus_slv4">
+         <spirit:interface spirit:componentRef="i_apbSubSystem" spirit:busRef="i_apbbus_slv4"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="i_apbbus_slv5">
+         <spirit:interface spirit:componentRef="i_apbSubSystem" spirit:busRef="i_apbbus_slv5"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="i_apbbus_slv6">
+         <spirit:interface spirit:componentRef="i_apbSubSystem" spirit:busRef="i_apbbus_slv6"/>
+      </spirit:hierConnection>
+   </spirit:hierConnections>
+   <spirit:description/>
+   <spirit:vendorExtensions>
+      <groups/>
+   </spirit:vendorExtensions>
+</spirit:design>

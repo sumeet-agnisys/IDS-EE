@@ -1,0 +1,13 @@
+Version : 0.8
+Product : SoCEEnterprise
+Date    : Fri Jun 24 11:04:40 IST 2016
+============================================================
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========
+---call generateOutPut : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\top_v\sda_pad\soce\sda_fliter_inst_component.xml
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========

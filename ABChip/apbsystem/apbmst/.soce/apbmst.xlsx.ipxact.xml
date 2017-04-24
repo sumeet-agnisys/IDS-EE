@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ids="http://www.agnisys.com/">
+   <spirit:vendor>spiritconsortium.org</spirit:vendor>
+   <spirit:library>Leon2RTL</spirit:library>
+   <spirit:name>apbmst</spirit:name>
+   <spirit:version>1.2</spirit:version>
+   <spirit:busInterfaces>
+      <spirit:busInterface>
+         <spirit:name>AHBClk</spirit:name>
+         <spirit:busType spirit:vendor="spiritconsortium.org" spirit:library="busdef.clock" spirit:name="clock_rtl" spirit:version="1.0"/>
+         <spirit:abstractionType spirit:vendor="spiritconsortium.org" spirit:library="busdef.clock" spirit:name="clock_rtl" spirit:version="1.0"/>
+         <spirit:slave/>
+         <spirit:portMaps>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>CLK</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>clk</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+         </spirit:portMaps>
+      </spirit:busInterface>
+      <spirit:busInterface>
+         <spirit:name>AHBReset</spirit:name>
+         <spirit:busType spirit:vendor="spiritconsortium.org" spirit:library="busdef.reset" spirit:name="reset_rtl" spirit:version="1.0"/>
+         <spirit:abstractionType spirit:vendor="spiritconsortium.org" spirit:library="busdef.reset" spirit:name="reset_rtl" spirit:version="1.0"/>
+         <spirit:slave/>
+         <spirit:portMaps>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>RESETn</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>rst</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+         </spirit:portMaps>
+      </spirit:busInterface>
+      <spirit:busInterface memorymapref="ambaAHB">
+         <spirit:name>ambaAHB</spirit:name>
+         <spirit:description>{memoryMapRef=ambaAHB}</spirit:description>
+         <spirit:busType spirit:vendor="amba.com" spirit:library="AMBA2" spirit:name="AHB_rtl" spirit:version="r2p0_6"/>
+         <spirit:abstractionType spirit:vendor="amba.com" spirit:library="AMBA2" spirit:name="AHB_rtl" spirit:version="r2p0_6"/>
+         <spirit:slave/>
+         <spirit:portMaps>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HSIZE</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hsize</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HADDR</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>haddr</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HTRANS</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>htrans</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HWRITE</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hwrite</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HWDATA</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hwdata</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HREADY</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hreadyin</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HSELx</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hsel</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HRDATA</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hrdata</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HREADYOUT</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hreadyout</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HRESP</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hresp</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HPROT</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hprot</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>HBURST</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>hburst</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+         </spirit:portMaps>
+      </spirit:busInterface>
+      <spirit:busInterface>
+         <spirit:name>ambaAPB</spirit:name>
+         <spirit:description>{addressSpaceRef=apb}</spirit:description>
+         <spirit:busType spirit:vendor="amba.com" spirit:library="AMBA2" spirit:name="APB_rtl" spirit:version="r2p0_4"/>
+         <spirit:abstractionType spirit:vendor="amba.com" spirit:library="AMBA2" spirit:name="APB_rtl" spirit:version="r2p0_4"/>
+         <spirit:master>
+            <spirit:addressSpaceRef spirit:addressSpaceRef="apb"/>
+         </spirit:master>
+         <spirit:portMaps>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>PRDATA</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>prdata</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>PWDATA</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>pwdata</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>PENABLE</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>penable</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>PADDR</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>paddr</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>PWRITE</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>pwrite</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+            <spirit:portMap>
+               <spirit:logicalPort>
+                  <spirit:name>PSELx</spirit:name>
+               </spirit:logicalPort>
+               <spirit:physicalPort>
+                  <spirit:name>psel</spirit:name>
+               </spirit:physicalPort>
+            </spirit:portMap>
+         </spirit:portMaps>
+      </spirit:busInterface>
+   </spirit:busInterfaces>
+   <spirit:addressSpaces>
+      <spirit:addressSpace>
+         <spirit:name>apb</spirit:name>
+         <spirit:range>1M</spirit:range>
+         <spirit:width>32.0</spirit:width>
+         <spirit:description>Master Port Size :</spirit:description>
+      </spirit:addressSpace>
+   </spirit:addressSpaces>
+   <spirit:model>
+      <spirit:views>
+         <spirit:view>
+            <spirit:name>spec_type</spirit:name>
+            <spirit:envIdentifier>::Hierarchy</spirit:envIdentifier>
+         </spirit:view>
+         <spirit:view>
+            <spirit:name>ams_discipline</spirit:name>
+            <spirit:envIdentifier>::Hierarchy</spirit:envIdentifier>
+         </spirit:view>
+      </spirit:views>
+      <spirit:ports>
+         <spirit:port>
+            <spirit:name>clk</spirit:name>
+            <spirit:displayName>clk</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>clock</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>rst</spirit:name>
+            <spirit:displayName>rst</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>reset</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hsize</spirit:name>
+            <spirit:displayName>hsize</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>2</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>haddr</spirit:name>
+            <spirit:displayName>haddr</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>31</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>htrans</spirit:name>
+            <spirit:displayName>htrans</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>1</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hwrite</spirit:name>
+            <spirit:displayName>hwrite</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hwdata</spirit:name>
+            <spirit:displayName>hwdata</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>31</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hreadyin</spirit:name>
+            <spirit:displayName>hreadyin</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hsel</spirit:name>
+            <spirit:displayName>hsel</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hrdata</spirit:name>
+            <spirit:displayName>hrdata</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>out</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>31</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hreadyout</spirit:name>
+            <spirit:displayName>hreadyout</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>out</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hresp</spirit:name>
+            <spirit:displayName>hresp</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>out</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>1</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hprot</spirit:name>
+            <spirit:displayName>hprot</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>3</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>hburst</spirit:name>
+            <spirit:displayName>hburst</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>2</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>prdata</spirit:name>
+            <spirit:displayName>prdata</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>in</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>31</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>pwdata</spirit:name>
+            <spirit:displayName>pwdata</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>out</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>31</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>penable</spirit:name>
+            <spirit:displayName>penable</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>out</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>paddr</spirit:name>
+            <spirit:displayName>paddr</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>out</spirit:direction>
+               <spirit:vector>
+                  <spirit:left>31</spirit:left>
+                  <spirit:right>0</spirit:right>
+               </spirit:vector>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>pwrite</spirit:name>
+            <spirit:displayName>pwrite</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>out</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+         <spirit:port>
+            <spirit:name>psel</spirit:name>
+            <spirit:displayName>psel</spirit:displayName>
+            <spirit:description/>
+            <spirit:wire>
+               <spirit:direction>out</spirit:direction>
+               <spirit:wireTypeDefs>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName>digital</spirit:typeName>
+                     <spirit:viewNameRef>spec_type</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+                  <spirit:wireTypeDef>
+                     <spirit:typeName/>
+                     <spirit:viewNameRef>ams_discipline</spirit:viewNameRef>
+                  </spirit:wireTypeDef>
+               </spirit:wireTypeDefs>
+            </spirit:wire>
+         </spirit:port>
+      </spirit:ports>
+      <spirit:modelParameters>
+         <spirit:modelParameter spirit:dataType="integer">
+            <spirit:name>default_address</spirit:name>
+            <spirit:description>example to show, how to write parameters.</spirit:description>
+            <spirit:value spirit:id="default_address">0.0</spirit:value>
+         </spirit:modelParameter>
+      </spirit:modelParameters>
+   </spirit:model>
+   <spirit:choices>
+      <spirit:choice>
+         <spirit:name>addressWidthChoice</spirit:name>
+         <spirit:enumeration spirit:text="8K">8K</spirit:enumeration>
+         <spirit:enumeration spirit:text="16K">16K</spirit:enumeration>
+         <spirit:enumeration spirit:text="32K">32K</spirit:enumeration>
+         <spirit:enumeration spirit:text="64K">64K</spirit:enumeration>
+         <spirit:enumeration spirit:text="128K">128K</spirit:enumeration>
+         <spirit:enumeration spirit:text="256K">256K</spirit:enumeration>
+         <spirit:enumeration spirit:text="512K">512K</spirit:enumeration>
+         <spirit:enumeration spirit:text="1M">1M</spirit:enumeration>
+         <spirit:enumeration spirit:text="2M">2M</spirit:enumeration>
+         <spirit:enumeration spirit:text="4M">4M</spirit:enumeration>
+         <spirit:enumeration spirit:text="8M">8M</spirit:enumeration>
+         <spirit:enumeration spirit:text="16M">16M</spirit:enumeration>
+         <spirit:enumeration spirit:text="32M">32M</spirit:enumeration>
+         <spirit:enumeration spirit:text="64M">64M</spirit:enumeration>
+         <spirit:enumeration spirit:text="128M">128M</spirit:enumeration>
+         <spirit:enumeration spirit:text="256M">256M</spirit:enumeration>
+         <spirit:enumeration spirit:text="1024M">1024M</spirit:enumeration>
+         <spirit:enumeration spirit:text="2048M">2048M</spirit:enumeration>
+      </spirit:choice>
+   </spirit:choices>
+   <spirit:description>APB Master Bus</spirit:description>
+   <spirit:vendorExtensions>
+      <groups>
+         <group sid="2:1" name="VBG Voltage">
+            <functions>
+               <function sid="2:2" name="VBG.v" symbol="Vref">
+                  <corners>
+                     <corner sid="2:5" req.typical="1.223" unit="Volt">Typical_Corner</corner>
+                  </corners>
+                  <doc>VBG Nominal Voltage</doc>
+               </function>
+               <function sid="3:2" name="Accuracy(VBG.v, Vref.typical)" symbol="Vrefa">
+                  <corners>
+                     <corner sid="3:5" req.min="-0.2" req.max="0.2" unit="%">Boldface_Corner</corner>
+                     <corner sid="4:5" test.min="VBAT.v=2.8" test.max="VBAT.v=5.5" req.min="-0.5" req.max="0.5" unit="%">Boldface_Corner</corner>
+                     <corner sid="5:5" test.typical="Low Power Mode" req.min="-1.0" req.max="1.0" unit="%">Boldface_Corner</corner>
+                  </corners>
+                  <doc>VBG Accurcy Post Trim</doc>
+               </function>
+               <function sid="6:2" name="Value_Range(VBG.v, Vref.typical)" symbol="Vref_retrim">
+                  <corners>
+                     <corner sid="6:5" test.typical="I_BG_Trim = 0x00" req.min="90.0" req.max="110.0" unit="%">Boldface_Corner</corner>
+                     <corner sid="7:5" test.typical="I_BG_Trim = 0x00" req.min="98.0" req.max="102.0" unit="%">Boldface_Corner</corner>
+                  </corners>
+                  <doc>Trim code = 00</doc>
+               </function>
+               <function sid="8:2" name="Accuracy(VBG.v, Vref.typical)" symbol="Vref_trimrange">
+                  <corners>
+                     <corner sid="8:5" test.min="I_BG_Trim = 0x00" test.max="I_BG_Trim = 0xFF" req.min="-5.2" req.max="5.2" unit="%">Boldface_Corner</corner>
+                  </corners>
+                  <doc>Trim code 8 bits, 1LSB = 0.5mV</doc>
+               </function>
+            </functions>
+         </group>
+         <group sid="9:1" name="SUPPLY CURRENT">
+            <functions>
+               <function sid="9:2" name="VBG.i" symbol="Inom">
+                  <corners>
+                     <corner sid="9:5" req.max="8.0" req.typical="5.0" unit="uA">Boldface_Corner</corner>
+                  </corners>
+                  <doc>VBG Supply Current</doc>
+               </function>
+               <function sid="10:2" name="Temp_Coef(VBG.v, Vref.typical, Tj)" symbol="VBG_iq_tc">
+                  <corners>
+                     <corner sid="10:5" req.typical="0.15" unit="%/ °C">Boldface_Corner</corner>
+                  </corners>
+                  <doc>VBG supply current temp coefficient (PTAT)</doc>
+               </function>
+            </functions>
+         </group>
+         <group sid="11:1" name="PSRR (with Coll_sel = 0 and 50 ohm res at VBAT)">
+            <functions>
+               <function sid="11:2" name="PSRR(VBG.v, VBAT.v)" symbol="PSRR">
+                  <corners>
+                     <corner sid="11:5" test.min="VBAT.f = 50Hz" test.max="VBAT.f = 1kHz" test.typical="Coll_sel = 0" req.min="45.0" req.typical="70.0" unit="dB">Typical_Corner</corner>
+                     <corner sid="12:5" test.min="VBAT.f = 1kHz" test.max="VBAT.f = 10kHz" test.typical="Coll_sel = 0" req.min="30.0" unit="dB">Typical_Corner</corner>
+                     <corner sid="13:5" test.min="VBAT.f = 10kHz" test.max="VBAT.f = 100kHz" test.typical="Coll_sel = 0" req.min="45.0" unit="dB">Typical_Corner</corner>
+                     <corner sid="14:5" test.min="VBAT.f = 100kHz" test.max="VBAT.f = 1MHz" test.typical="Coll_sel = 0" req.min="50.0" unit="dB">Typical_Corner</corner>
+                  </corners>
+                  <doc>VBG PSRR 50 Hz to 1kHz</doc>
+                  <doc>VBG PSRR 1kHz to 10kHz</doc>
+                  <doc>VBG PSRR 10kHz to 100kHz</doc>
+                  <doc>VBG PSRR 100kHz to 1MHz</doc>
+               </function>
+            </functions>
+         </group>
+         <group sid="15:1" name="PSRR (with Coll_sel = 1 and 50 ohm res at VBAT)">
+            <functions>
+               <function sid="15:2" name="PSRR(VBG.v, VBAT.v)" symbol="PSRR">
+                  <corners>
+                     <corner sid="15:5" test.min="VBAT.f = 50Hz" test.max="VBAT.f = 1kHz" test.typical="Coll_sel = 1" req.min="70.0" unit="dB">Typical_Corner</corner>
+                     <corner sid="16:5" test.min="VBAT.f = 1kHz" test.max="VBAT.f = 10kHz" test.typical="Coll_sel = 1" req.min="45.0" unit="dB">Typical_Corner</corner>
+                     <corner sid="17:5" test.min="VBAT.f = 10kHz" test.max="VBAT.f = 100kHz" test.typical="Coll_sel = 1" req.min="60.0" unit="dB">Typical_Corner</corner>
+                     <corner sid="18:5" test.min="VBAT.f = 100kHz" test.max="VBAT.f = 1MHz" test.typical="Coll_sel = 1" req.min="60.0" unit="dB">Typical_Corner</corner>
+                  </corners>
+                  <doc>VBG PSRR 50 Hz to 1kHz</doc>
+                  <doc>VBG PSRR 1kHz to 10kHz</doc>
+                  <doc>VBG PSRR 10kHz to 100kHz</doc>
+                  <doc>VBG PSRR 100kHz to 1MHz</doc>
+               </function>
+            </functions>
+         </group>
+         <group sid="19:1" name="Voltage Under Noise">
+            <functions>
+               <function sid="19:2" name="abs(VBG.v - Vref.typical)" symbol="Noise">
+                  <corners>
+                     <corner sid="19:5" req.typical="1.0" unit="mV">Typical_Corner</corner>
+                  </corners>
+                  <doc>VBG from 100 to 10 MHz p-p noise, chopper noise, + ac noise</doc>
+               </function>
+            </functions>
+         </group>
+      </groups>
+      <features>
+         <feature>Convert the AHB protocol to APB protocol</feature>
+         <feature>Slave AHB interface and master APB interface</feature>
+      </features>
+      <applications>
+         <application>Convert the AHB protocol to APB protocol.</application>
+      </applications>
+      <operating_conditions>
+         <symbol name="symbol">
+            <min>min</min>
+            <typ>typical</typ>
+            <max>max</max>
+            <unit>unit</unit>
+            <spirit:description>description</spirit:description>
+         </symbol>
+         <symbol name="VCC3P3_S5">
+            <min>3.2</min>
+            <typ>3.3</typ>
+            <max>3.4</max>
+            <unit>V</unit>
+            <spirit:description>S5 3.3V rail Standby LDO input</spirit:description>
+         </symbol>
+         <symbol name="VCC3P3_S3">
+            <min>3.2</min>
+            <typ>3.3</typ>
+            <max>3.4</max>
+            <unit>V</unit>
+            <spirit:description>S3 3.3V rail Standby LDO input</spirit:description>
+         </symbol>
+         <symbol name="VCC3P3_A">
+            <min>3.2</min>
+            <typ>3.3</typ>
+            <max>3.4</max>
+            <unit>V</unit>
+            <spirit:description>S0 3.3V rail Standby LDO input</spirit:description>
+         </symbol>
+      </operating_conditions>
+      <max_rating>
+         <symbol name="symbol">
+            <min>min</min>
+            <typ>typical</typ>
+            <max>max</max>
+            <unit>unit</unit>
+            <spirit:description>description</spirit:description>
+         </symbol>
+         <symbol name="Tj">
+            <min>-70.0</min>
+            <typ>-</typ>
+            <max>150.0</max>
+            <unit>°C</unit>
+            <spirit:description>Absolute Maximum Junction Temperature</spirit:description>
+         </symbol>
+         <symbol name="Ts">
+            <min>-65.0</min>
+            <typ>-</typ>
+            <max>150.0</max>
+            <unit>°C</unit>
+            <spirit:description>Storage Temperature</spirit:description>
+         </symbol>
+         <symbol name="VBAT">
+            <min>-0.3</min>
+            <typ>-</typ>
+            <max>6.0</max>
+            <unit>V</unit>
+            <spirit:description>Absolute Maximum VBAT to AGND Voltage</spirit:description>
+         </symbol>
+         <symbol name="VDD">
+            <min>-0.3</min>
+            <typ>-</typ>
+            <max>1.8</max>
+            <unit>V</unit>
+            <spirit:description>Absolute Maximum VDD to DGND Voltage</spirit:description>
+         </symbol>
+      </max_rating>
+      <designers>
+         <designer name="Rohit Sharma">
+            <email>rohit@agnisys.com</email>
+         </designer>
+      </designers>
+      <dieSize>
+         <area>72000.0</area>
+         <width>600.0</width>
+         <height>120.0</height>
+      </dieSize>
+      <FabProcess>
+         <process name="Process">TSMC 0.13um BCD Cu 1P6M 1.5V/5V/36V with ESD, HiR, 3 Implants, MIM, UTM, OTP 8in - 41L &gt;5000w/month</process>
+         <process name="X Metal Layer">6.0</process>
+         <process name="AM Last Level">No</process>
+         <process name="Filter">No</process>
+         <process name="MiM">Yes</process>
+         <process name="Thick Top Metal">Yes</process>
+         <process name="Deep N Well">Yes</process>
+         <process name="Hi-R Poly">Yes</process>
+         <process name="Automotive Adder">No</process>
+         <process name="Triple Well">No</process>
+         <process name="EPI">Yes</process>
+         <process name="ESD">Yes</process>
+         <process name="Implant/Zener">Yes</process>
+         <process name="Polymide">Yes</process>
+         <process name="BR Cap">No</process>
+         <process name="Dual Metal Inductor">No</process>
+         <process name="Back Side Grind">No</process>
+      </FabProcess>
+      <esd>
+         <symbol name="Symbol">
+            <min>min</min>
+            <typ>typical</typ>
+            <max>max</max>
+            <unit>Unit</unit>
+            <spirit:description>Description</spirit:description>
+         </symbol>
+         <symbol name="HBM">
+            <max>2k</max>
+            <unit>V</unit>
+            <spirit:description>Human Body Model (Tested per JESD22-A114E)</spirit:description>
+         </symbol>
+         <symbol name="CDM">
+            <max>500.0</max>
+            <unit>V</unit>
+            <spirit:description>Charged Device Model (Tested per JESD22-C101)</spirit:description>
+         </symbol>
+         <symbol name="MM">
+            <unit>V</unit>
+            <spirit:description>Machine Model (Tested per JESD22-A115C)</spirit:description>
+         </symbol>
+      </esd>
+   </spirit:vendorExtensions>
+</spirit:component>

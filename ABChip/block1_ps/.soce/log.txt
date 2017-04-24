@@ -1,0 +1,36 @@
+Version : 0.8
+Product : SoCEEnterprise
+Date    : Thu Apr 28 18:34:05 IST 2016
+============================================================
+
+======================================================
+---input file : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\block1_ps
+---call checkGenerateFun
+---config xml path : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\socconfig.xml
+---workspace : D:\runtime-EclipseApplication
+---top element : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\block1_ps
+---runs on top level element
+---merge file found
+---call generateIpxactForTopElement
+---Output directory for top element for merging : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\block1_ps\.soce
+---merging file : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\block1_ps\block1_ps.xlsx
+---IDSBatchLOC : D:\AgnisysProjects\java\SoCEnterprise\resource\IDSBatch.jar
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========
+--- call generateMergeFiles
+---Start creating ipxact for given merge file---
+---merge file path : D:\block1_ps.v
+---msgg from parseVerilog : 
+---merge file path : C:\Users\Agnisys\Desktop\registers.docx
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========
+---call batch for merge file
+---msg from batch : 
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========

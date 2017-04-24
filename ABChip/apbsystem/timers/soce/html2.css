@@ -1,0 +1,143 @@
+
+
+/*-----------------------------------         Starts  HTML        --------------------------*/
+
+/*h1{font-size: 30px;font-family: arial;color:Navy;text-align:center;}*/
+h1 { 
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 3;
+    margin-right: 0;
+    font-weight: bold;
+	font-family: Franklin Gothic Medium;
+ 
+}
+
+.body_html_one{margin-top: 2px; margin-right: 10px; margin-bottom: 10px; margin-left: 30px;}
+
+.index_table{table-layout:auto;border-collapse:collapse;border-style:solid;border:solid;border-width:thin;border-color:#778899;width:75%;margin-left:120px}
+
+.index{font-size: 20px;font-family: arial;background-color:#EEEEEE;color:black}
+
+.index_attribute{font-size: 15px;font-family: arial;background-color:#DCDCDC; color:#292351; text-align:center}
+       
+.indexvalue{font-size: 14px;font-family: arial;color:black;font-style:normal}
+
+.indexvalue_prop{font-size: 14px;font-family: arial;color:#17D210;font-style:normal}
+
+.classtd{font-size:12px;}
+       
+.pallete{font-size: 20px;font-family: 978888arial;background-color:#EEEEEE; color:#292351; width:96%}
+
+.subindex{font-size: 16px;font-family: arial;background-color:#EEEEEE; color:#292351; width:96%}
+
+.register_table{table-layout:auto;border-collapse:collapse;border-style:solid;border:solid;border-width:thin;border-color:#778899;margin-left:14%;width:70%;}
+
+.register_table_reggroup{table-layout:auto;border-collapse:collapse;border-style:solid;border:solid;border-width:thin;border-color:#778899;margin-left:0;width:96%;}
+
+.count_table{table-layout:auto;border-collapse:collapse;border-style:solid;border:solid;border-width:thin;border-color:#778899;margin-left:0;}
+
+.registerindex{font-size: 15px;font-family: arial;background-color:#EEEEEE; color:#292351}
+
+.registerindex1{font-size: 14px;font-family: arial;background-color:#EEEEEE; color:#292351; width:auto}
+
+.table_value{font-size: 15px;font-family: arial;color:black;font-style:normal}
+
+.table_value1{font-size: 12px;font-family: arial;color:black;font-style:normal}
+
+.doc_table{font-size: 14px;font-family: arial;background-color:#EEEEEE;color:black}
+
+/*--------------------------------------         Ends HTML       --------------------------*/
+
+/*---------------------------------------         Starts HTML2    --------------------------*/
+
+@media print {
+#non-printable {
+    display: none;
+}
+#printable {
+    display: block;
+}
+}
+ul {
+    margin: 0;
+    padding: 1px 4px;
+}
+
+.ul_html2 {
+    margin: 0;
+    padding: 0px 8px;
+}
+.classname {
+    background-color: transparent;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    color: #AD0909;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5px 55px;
+    text-decoration: none;
+}
+.classname:active {
+    position: relative;
+    top: 1px;
+}
+
+.index_heading{font-size: 20px;font-family: sans-serif;color:Navy; text-align:center;margin-top:1px;}
+
+h3{font-size: 20px;font-family: sans-serif;color:Navy; text-align:center}
+
+h2{font-size: 22px;font-family: sans-serif;color:Navy; text-align:left}
+
+.table_div{table-layout:auto;border-collapse:collapse;border-style:solid;border:solid;border-width:thin;border-color:#778899}
+
+.print{margin-left:97%;}
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 5%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+
+
+.heading {
+ font-size: 18px;
+ font-family: Franklin Gothic Medium;
+ color:rgb(200,0,0);
+ text-align:start
+}
+
+
+.main_heading {
+ font-size: 25px;
+ font-family: Franklin Gothic Heavy;
+ color:black;
+ text-align:start
+}	
+
+
+.text {
+ font-size: 13px;
+ font-family: Franklin Gothic Medium;
+ color:black;
+ text-align:start
+}
+
+
+.container {
+   -webkit-column-count: 2;
+      -moz-column-count: 2;
+           column-count: 2;
+
+   -webkit-column-gap: 20px;
+      -moz-column-gap: 20px;
+           column-gap: 20px;
+}
+
+
+/*--------------------------------------         Ends HTML2       --------------------------*/

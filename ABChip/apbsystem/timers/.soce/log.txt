@@ -1,0 +1,9 @@
+Version : 0.8
+Product : SoCEEnterprise
+Date    : Thu Jun 09 15:44:24 IST 2016
+============================================================
+---call generateOutPut : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\apbsystem\timers\timers.xlsx
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========

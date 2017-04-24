@@ -1,0 +1,21 @@
+Version : 0.8
+Product : SoCEEnterprise
+Date    : Fri Jun 03 14:18:20 IST 2016
+============================================================
+
+======================================================
+---input file : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\block2
+---call checkGenerateFun
+---config xml path : null
+---workspace : D:\runtime-EclipseApplication
+---top element : C:\Users\Agnisys\Desktop\newWorkspace\MyProj3\com
+---call generateToplevel
+---call generateIPXACT
+---call recursiveCallOnAllComp
+---compDir : C:\Users\Agnisys\Desktop\newWorkspace\MyProj1\block2
+---file path : block2.xlsx
+---call generateOutPut
+---call exec
+---print final command for batch--- 
+---call getOutput
+============output generation done===========
